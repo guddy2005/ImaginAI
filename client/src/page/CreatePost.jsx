@@ -15,7 +15,7 @@ const CreatePost = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await fetch('http://localhost:8080/api/v1/dalle', {
+        const response = await fetch('https://imaginai-backend-m2zh.onrender.com/api/v1/dalle', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ prompt: form.prompt }),
@@ -39,7 +39,7 @@ const CreatePost = () => {
     if (form.prompt && form.photo) {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:8080/api/v1/post', {
+        const response = await fetch('https://imaginai-backend-m2zh.onrender.com/api/v1/post', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ ...form }),
@@ -93,7 +93,7 @@ const CreatePost = () => {
             handleSurpriseMe={handleSurpriseMe}
           />
 
-          {/* IMAGE PREVIEW BOX - IMPROVED DESIGN */}
+          
           <div className="relative bg-gray-50 border-2 border-dashed border-gray-300 text-gray-900 text-sm rounded-xl focus:ring-blue-500 focus:border-blue-500 w-full h-80 flex justify-center items-center overflow-hidden transition-all hover:border-[#6469ff]">
             {form.photo ? (
               <img src={form.photo} alt={form.prompt} className="w-full h-full object-contain" />
