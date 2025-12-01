@@ -1,6 +1,6 @@
 🎨 ImaginAI - AI-Powered Image Generation Platform
 
-Live Demo:
+Live Demo:https://imagin-ai-one.vercel.app/
 
 📖 Overview
 
